@@ -1,0 +1,31 @@
+<div style="text-align:center">
+  <h2>{{ getHeaderString() }}</h2>
+</div>
+
+<div>
+  <table class="tableToDo">
+    <tr class="rowToDo">
+      <td class="colTextToDo">
+        <input
+          #InputField
+          [attr.type]="'text'"
+          [style.width]="'100%'"
+          (keydown.enter)="addToDoItem($event, InputField.value)"
+          [(ngModel)]="inputValue"
+        />
+      </td>
+      <td class="colBtnToDo">
+        <button (click)="addToDoItem($event, InputField.value)">+</button>
+      </td>
+    </tr>
+
+    <tr class="rowToDo" *ngFor="let item of (toDoItems | keyvalue)">
+      <td class="colTextToDo" (dblclick)="dblclkToDoItem(item.key)">
+        {{ item?.value }}
+      </td>
+      <td class="colBtnToDo">
+        <button (click)="deleteToDoItem(item.key)">-</button>
+      </td>
+    </tr>
+  </table>
+</div>

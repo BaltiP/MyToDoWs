@@ -1,0 +1,20 @@
+td {
+  width: 100%;
+}
+
+.tableToDo {
+  width: 100%;
+}
+
+.rowToDo {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.colTextToDo {
+  width: 100%;
+}
+
+.colBtnToDo {
+  width: 100%;
+}
