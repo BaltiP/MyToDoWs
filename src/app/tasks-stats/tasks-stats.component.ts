@@ -5,10 +5,4 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './tasks-stats.component.html',
   styleUrls: ['./tasks-stats.component.css']
 })
-export class TasksStatsComponent {
-  @Input() itemsDone = 0;
-
-  incrementItemsDone() {
-    this.itemsDone++;
-  }
-}
+export class TasksStatsComponent {}

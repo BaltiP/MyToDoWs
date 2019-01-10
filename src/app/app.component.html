@@ -1,17 +1,11 @@
 <!-- <div style="text-align:center"> -->
-<div [style.text-align]="'center'">
-  <h1>{{ title }}!</h1>
-</div>
+<div style="text-align:center"><h1>ToDo!</h1></div>
 
 <div class="grid-container center-div">
-  <div class="grid-item">
-    <app-tasks-to-do
-      (transferItemToDone)="tasksDone.addToDoItem($event); incrementItemsDone()"
-    ></app-tasks-to-do>
-  </div>
-  <div class="grid-item"><app-tasks-done #tasksDone></app-tasks-done></div>
+  <div class="grid-item"><app-tasks-to-do></app-tasks-to-do></div>
+  <div class="grid-item"><app-tasks-done></app-tasks-done></div>
 </div>
 <div class="taskstats">
-  <app-tasks-stats [itemsDone]="itemsDone"></app-tasks-stats>
-  <button (click)="tasksDone.clear(); itemsDone = 0">Zurücksetzen</button>
+  <app-tasks-stats></app-tasks-stats>
+  <button>Zurücksetzen</button>
 </div>
